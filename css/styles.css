@@ -1,0 +1,56 @@
+body {
+  font-family: Roboto;
+  background-image: url("../images/sky.jpg");
+  background-size: cover;
+  background-position-y: 1600px;
+  color: white;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  font-size: 24px;
+  font-weight: bold;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: auto 60px;
+}
+
+.container {
+  display: flex;
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 320px;
+  background-color: #39416B;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+              0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #eeeeee;
+}
+
+.big-text {
+  display: flex;
+  flex-flow: column wrap;
+  height: 500px;
+  width: 450px;
+  text-align: center;
+}
+
+.big-text h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.big-text h2 {
+  font-size: 30px;
+}
