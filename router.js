@@ -3,7 +3,6 @@ const router = express.Router();
 const controller = require('./controllers/controller')
 
 router.get('/', controller.renderHomePage);
-router.get('/about', controller.renderAboutPage);
 router.get('/resume', controller.renderResumePage);
 router.get('/skills', controller.renderSkillsPage);
 router.get('/contact', controller.renderContactPage);

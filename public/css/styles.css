@@ -73,6 +73,6 @@ body {
 
 @media only screen and (max-width: 767px) {
   body {
-    background-image: url(/public/images/sky-small.jpg);
+    background-image: url("../images/sky-small.jpg");
   }
 }

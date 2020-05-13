@@ -3,8 +3,15 @@ const axios = require('axios')
 const Sprite = require('../model/Sprite')
 
 // Renders pages
-exports.renderHomePage = (req, res) => res.render('index')
-exports.renderAboutPage = (req, res) => res.render('about')
+exports.renderHomePage = (req, res) => {
+    axios.get('https://gitconnected.com/v1/portfolio/basedantoni')
+        .then((response) => {
+            const { picture, label, headline, summary, region } = response.data.basics
+            res.render('index', {
+                picture: picture,
+            })
+        })
+}
 exports.renderSkillsPage = (req, res) => res.render('skills')
 exports.renderResumePage = (req, res) => res.render('resume')
 exports.renderContactPage = (req, res) => res.render('contact')
