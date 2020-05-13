@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const router = require('./router')
 
 const app = express();
 
@@ -12,8 +13,10 @@ app.use(express.json());
 // Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('views', 'views')
+// Hbs Config
+app.set('views', 'views');
+app.set('view engine', 'hbs')
 
-
+app.use('/', router)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
