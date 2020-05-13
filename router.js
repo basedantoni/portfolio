@@ -9,7 +9,7 @@ router.get('/skills', controller.renderSkillsPage);
 router.get('/contact', controller.renderContactPage);
 router.get('/portfolio', controller.renderPortfolioPage);
 
-// Get Pikachu
+// Get Sprite
 router.post('/portfolio', controller.getPokemon);
 
 module.exports = router;

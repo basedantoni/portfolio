@@ -2,7 +2,10 @@ body {
   font-family: Roboto;
   background-image: url("../images/sky.jpg");
   background-size: cover;
-  background-position-y: 1600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #464646;
   color: white;
 }
 
@@ -24,6 +27,19 @@ body {
 
 .container {
   display: flex;
+}
+
+.nav-link {
+  font-size: 24px;
+  font-weight: bold;
+  list-style-type: none;
+  display: flex;
+  text-decoration: none;
+  color: inherit
+}
+
+.nav-link:hover {
+  color: #8f8f8fdc;
 }
 
 .card {
@@ -53,4 +69,10 @@ body {
 
 .big-text h2 {
   font-size: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(/public/images/sky-small.jpg);
+  }
 }

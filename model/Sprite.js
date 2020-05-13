@@ -1,12 +1,12 @@
-const Sprites = function(data) {
+const Sprite = function(data) {
     this.data = data
     this.errors = []
 }
 
-Sprites.prototype.validateUserInput = () => {
+Sprite.prototype.validateUserInput = function() {
     if(this.data === '') {
         this.errors.push('Please enter Pokemon')
     }
 }
 
-module.exports = Sprites
+module.exports = Sprite

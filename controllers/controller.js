@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const Sprites = require('../model/Sprites')
+const Sprite = require('../model/Sprite')
 
 // Renders pages
 exports.renderHomePage = (req, res) => res.render('index')
@@ -13,8 +13,9 @@ exports.renderPortfolioPage = (req, res) => res.render('portfolio')
 // Get Pokemon
 exports.getPokemon = (req, res) => {
     const pokemon = req.body.pokemon.toLowerCase();
-    const sprite = new Sprites(req.body.pokemon.toLowerCase());
-    sprite.validateUserInput
+    const sprite = new Sprite(req.body.pokemon.toLowerCase());
+    
+    sprite.validateUserInput();
 
     if(sprite.errors.length) {
         res.render('portfolio', {
@@ -24,8 +25,10 @@ exports.getPokemon = (req, res) => {
         // Axios GET request to PokeAPI for sprite link
         axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
         .then((response) => {
+            const { front_default: front, back_default: back } = response.data.sprites;
             res.render('portfolio', {
-            sprite: response.data.sprites.front_default
+                front: front,
+                back: back
             })
         })
         .catch(error => console.log(error))
