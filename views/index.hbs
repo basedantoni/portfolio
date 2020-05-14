@@ -2,43 +2,33 @@
 <html>
   <head>
     <title>Anthony Mercado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel = "stylesheet" type = "text/css" href = "./css/styles.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   </head>
   <body>
-    <section id="body">
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="/portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/resume">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="container">
-        <div class="card">
-          <img src="{{picture}}" alt="">
-        </div>
-        <div class="big-text">
-          <h1>Hello I'm Anthony</h1>
-          <h2>I'm a creative Web Developer</h2>
-          <h2>I enjoy turning ideas into something that works</h2>
-          <div>
-            <form action="/" method="POST">
-              <input name="city" type="text">
-              <button>Go!</button>
-            </form>
-          </div>
-        </div>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="card">
+        <img src="{{picture}}" alt="profile-pic" class="profile">
       </div>
-    </section> 
+      <div class="big-text">
+        <h1>Hello I'm Anthony</h1>
+        <h2>I'm a creative Web Developer</h2>
+        <h2>I enjoy turning ideas into something that works</h2>
+      </div>
+    </div>
   </body>
 </html>
