@@ -5,14 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "sass": "sass --watch public/scss/style.scss public/css/styles.css"
   },
   "author": "Anthony Mercado",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
-    "hbs": "^4.1.1"
+    "hbs": "^4.1.1",
+    "sass": "^1.26.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"

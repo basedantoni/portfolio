@@ -1,0 +1,81 @@
+$primary-color: #FF7597;
+$primary-color-variant: #FF0266;
+$background: #121212;
+$high-emphasis: rgba(255, 255, 255, 0.87);
+$medium-emphasis: rgba(255, 255, 255, 0.6);
+$disabled: rgba(255, 255, 255, 0.38);
+$font-stack: 'Inter', sans-serif;
+
+* {
+  background-color: $background;
+  color: $high-emphasis;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+span { color: $primary-color; }
+.home { height: 100vh; }
+.about { height: 100vh; }
+.resume { height: 100vh; }
+.portfolio { height: 100vh; }
+.skills { height: 100vh; }
+  
+  /* iPhone 6+, 7+, 8+ portrait*/
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) {
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 75px;
+
+    h1 {
+      align-self: center;
+      font-style: normal;
+      font-weight: 1200;
+      font-size: 400%;
+      line-height: 100%;
+      letter-spacing: -1px;
+    }
+
+    h2 {
+    
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 300%;
+      line-height: 100%;
+      letter-spacing: -1px;
+      margin-top: 0;
+    }
+
+    p {
+      width: 78vw;
+      height: 408px;
+      left: 46px;
+      top: 912px;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: -0.25px;
+    }
+
+    .code-svg {
+      top: 100vh;
+    }
+  }
+}
