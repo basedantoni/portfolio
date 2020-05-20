@@ -6,14 +6,13 @@ exports.renderHomePage = (req, res) => {
       .then((response) => {
           const { picture, label, headline, summary, region } = response.data.basics
           const skills = response.data.skills
-          console.log(skills)
-
-          //Turn skills into an array
-          const skillsArr = Object.values(skills).map( skill => skill.name )
+          const projects = response.data.projects
+          console.log(projects)
 
           res.render('index', {
               picture: picture,
               skills: skills,
+              projects: projects,
           })
       })
 }
