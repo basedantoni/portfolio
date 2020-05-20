@@ -5,18 +5,11 @@
   line-height: 1.6;
 }
 
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 span {
   color: #FF7597;
 }
 
 section {
-  scroll-snap-align: start;
   height: 100vh;
   width: 100vw;
 }
@@ -56,14 +49,10 @@ section {
   }
   .container p {
     width: 78vw;
-    height: 408px;
-    left: 46px;
-    top: 912px;
     font-weight: normal;
     font-size: 24px;
     line-height: 150%;
     text-align: center;
-    letter-spacing: -0.25px;
   }
   .container .code-svg {
     top: 100vh;

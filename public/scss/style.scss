@@ -13,16 +13,9 @@ $font-stack: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 span { color: $primary-color; }
 
 section {
-  scroll-snap-align: start;
   height: 100vh;
   width: 100vw;
 }
@@ -71,14 +64,10 @@ section {
 
     p {
       width: 78vw;
-      height: 408px;
-      left: 46px;
-      top: 912px;
       font-weight: normal;
       font-size: 24px;
       line-height: 150%;
       text-align: center;
-      letter-spacing: -0.25px;
     }
 
     .code-svg {
