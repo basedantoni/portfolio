@@ -14,15 +14,10 @@ $font-stack: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
-:root {
-  overflow-x: hidden;
-}
-
 span { color: $primary-color; }
 
 section {
   height: 100vh;
-  width: 100vw;
 }
   
   /* iPhone 6+, 7+, 8+ portrait*/
