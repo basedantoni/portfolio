@@ -19,7 +19,7 @@ section {
     position: fixed;
     width: 100vw;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
     /* Toggler Animate */
     /* Make X */
@@ -28,7 +28,7 @@ section {
   .menu .toggler {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 2;
     height: 50px;
     width: 50px;
@@ -61,7 +61,7 @@ section {
   .menu .hamburger {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
     height: 30px;
     width: 30px;
@@ -100,7 +100,7 @@ section {
   .menu .nav {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     visibility: hidden;
     overflow: hidden;
