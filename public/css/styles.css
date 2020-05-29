@@ -13,6 +13,16 @@ section {
   height: 100vh;
 }
 
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
 /* iPhone 6+, 7+, 8+ portrait*/
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .menu {

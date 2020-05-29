@@ -19,6 +19,17 @@ span { color: $primary-color; }
 section {
   height: 100vh;
 }
+
+ul {
+  padding: 0;
+  li {
+    list-style: none;
+  
+    a {
+      text-decoration: none;
+    }
+  } 
+}
   
   /* iPhone 6+, 7+, 8+ portrait*/
 @media only screen 
