@@ -46,7 +46,7 @@
       <div class="container">
         <h2>Resume<span>.</span></h2>
         <p>As a formality I have provided my resume for download if you’d like to give it a look</p>
-        <a href="/images/resume.pdf" download="amercado-resume.pdf">Download Resume</a>
+        <button class="download"><a href="/images/resume.pdf" download="amercado-resume.pdf">Download Resume</a></button>
         <svg class="code-svg" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M36 39L45 30L36 21" stroke="#FF7597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M24 21L15 30L24 39" stroke="#FF7597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,9 +57,10 @@
       <div class="container">
         <h2>Portfolio<span>.</span></h2>
         <div class="card-container">
-          {{#each projects}}
-          <div class="card">{{this.name}}</div>
-          {{/each}}
+          <div class="card">
+            <img src="{{thumbnail}}" alt="project-image">
+            <h4 class="project-title">{{this.name}}</h3>
+          </div>
         </div>
         <svg class="code-svg" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M36 39L45 30L36 21" stroke="#FF7597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
