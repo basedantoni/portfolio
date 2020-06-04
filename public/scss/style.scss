@@ -257,6 +257,18 @@ a {
       text-align: center;
     }
 
+    button {
+      color: $primary-color;
+      transition: 0.25s;
+      background: none;
+      border: 2px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12em;
+      height: 4em;
+    }
+
     .code-svg {
       top: 100vh;
     }
@@ -291,8 +303,8 @@ a {
 
         img {
           display: flex;
-          max-width:230px;
-          max-height:95px;
+          max-width:300px;
+          max-height:125px;
           width: auto;
           height: auto;
           border-radius: 20px;

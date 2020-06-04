@@ -57,9 +57,10 @@
         <div class="card-container">
           {{#each projects}}
           <div class="card">              
-            <img src="{{this.image-url}}" loading="lazy" width="230px" height="95px">
+            <img src="{{this.image-url}}" loading="lazy" width="300px" height="125px">
             <h3>{{this.name}}</h3>
             <p class="summary">{{this.summary}}</p>
+            <button class="button"><a href="{{this.githubUrl}}" target="_blank">Github Repo</a></button>
           </div>
           {{/each}}
         </div>

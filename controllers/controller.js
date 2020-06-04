@@ -9,6 +9,8 @@ exports.renderHomePage = (req, res) => {
           const skills = response.data.skills
           const projects = response.data.projects
 
+          console.log(projects.githubUrl)
+
           // Assign url property to all projects
           projects.map(assignUrl.assignUrl)
 

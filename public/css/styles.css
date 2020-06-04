@@ -221,6 +221,17 @@ a {
     line-height: 150%;
     text-align: center;
   }
+  .container button {
+    color: #FF7597;
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    height: 4em;
+  }
   .container .code-svg {
     top: 100vh;
   }
@@ -252,8 +263,8 @@ a {
   }
   .container .card-container .card img {
     display: flex;
-    max-width: 230px;
-    max-height: 95px;
+    max-width: 300px;
+    max-height: 125px;
     width: auto;
     height: auto;
     border-radius: 20px;
