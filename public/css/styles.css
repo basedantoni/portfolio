@@ -3,6 +3,7 @@
   color: rgba(255, 255, 255, 0.87);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
+  outline: none;
 }
 
 span {
@@ -18,10 +19,6 @@ ul {
 }
 ul li {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .download {
@@ -41,6 +38,7 @@ a {
   color: #fff;
 }
 .download a {
+  text-decoration: none;
   display: block;
   width: 100%;
   height: 100%;
@@ -54,220 +52,270 @@ a {
   transform: translateY(-0.25em);
 }
 
-/* iPhone 6+, 7+, 8+ portrait*/
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
-  .menu {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    /* Toggler Animate */
-    /* Make X */
-    /* Show Nav */
-  }
-  .menu .toggler {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    height: 50px;
-    width: 50px;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .menu .toggler:checked + .hamburger div {
-    transform: rotate(135deg);
-  }
-  .menu .toggler:checked + .hamburger > div:before,
+.menu {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  /* Toggler Animate */
+  /* Make X */
+  /* Show Nav */
+}
+.menu .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+.menu .toggler:checked + .hamburger div {
+  transform: rotate(135deg);
+}
+.menu .toggler:checked + .hamburger > div:before,
 .menu .toggler:checked + .hamburger > div:after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  .menu .toggler:checked ~ .hamburger {
-    background: #1F1F1F;
-  }
-  .menu .toggler:checked ~ .nav {
-    visibility: visible;
-    background-color: #1F1F1F;
-  }
-  .menu .toggler:checked ~ .nav div {
-    transform: scale(1);
-    transition-duration: 0.75s;
-  }
-  .menu .toggler:checked ~ .nav div div {
-    opacity: 1;
-    transition: opacity 0.4s ease;
-  }
-  .menu .hamburger {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    height: 30px;
-    width: 30px;
-    padding: 1rem;
-    background: #121212;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Hamburger Line */
-    /* Top and Bottom Lines */
-    /* Moves Line Down */
-  }
-  .menu .hamburger div {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #FF7597;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-  }
-  .menu .hamburger div:before,
+  top: 0;
+  transform: rotate(90deg);
+}
+.menu .toggler:checked ~ .hamburger {
+  background: #1F1F1F;
+}
+.menu .toggler:checked ~ .nav {
+  visibility: visible;
+  background-color: #1F1F1F;
+}
+.menu .toggler:checked ~ .nav div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+.menu .toggler:checked ~ .nav div div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+.menu .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  padding: 1rem;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Hamburger Line */
+  /* Top and Bottom Lines */
+  /* Moves Line Down */
+}
+.menu .hamburger div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #FF7597;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+.menu .hamburger div:before,
 .menu .hamburger div:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: -10px;
-    width: 100%;
-    height: 2px;
-    background: inherit;
-  }
-  .menu .hamburger div:after {
-    top: 10px;
-  }
-  .menu .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    visibility: hidden;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1F1F1F;
-  }
-  .menu .nav div {
-    border-radius: 50%;
-    width: 10vw;
-    height: 10vh;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
-  }
-  .menu .nav div div {
-    background: #1F1F1F;
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    display: flex;
-    flex: none;
-  }
-  .menu .nav div div ul {
-    display: flex;
-    padding: 0;
-  }
-  .menu .nav div div ul li {
-    background-color: #1F1F1F;
-    list-style: none;
-    color: rgba(255, 255, 255, 0.87);
-    font-size: 1.5 rem;
-    padding: 3vw;
-  }
-  .menu .nav div div ul li a {
-    background-color: #1F1F1F;
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.4s ease;
-  }
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+.menu .hamburger div:after {
+  top: 10px;
+}
+.menu .nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1F1F1F;
+}
+.menu .nav div {
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+.menu .nav div div {
+  background: #1F1F1F;
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex: none;
+}
+.menu .nav div div ul {
+  display: flex;
+  padding: 0;
+}
+.menu .nav div div ul li {
+  background-color: #1F1F1F;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1.5 rem;
+  padding: 3vw;
+}
+.menu .nav div div ul li a {
+  background-color: #1F1F1F;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
 
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+}
+.container h1 {
+  align-self: center;
+  font-style: normal;
+  font-weight: 1200;
+  font-size: 400%;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+.container h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 250%;
+  color: #FF7597;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+.container p {
+  width: 80vw;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+}
+.container button {
+  color: #FF7597;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
+  height: 4em;
+}
+.container .code-svg {
+  top: 100vh;
+}
+.container .card-container {
+  display: flex;
+  padding-top: 20px;
+  max-width: 98vw;
+}
+.container .card-container .slick-arrow {
+  position: relative;
+  align-self: center;
+  align-items: center;
+  max-height: 40px;
+  max-width: 40px;
+  border-color: #121212;
+}
+.container .card-container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .card-container .card .summary {
+  width: 60vw;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+}
+.container .card-container .card img {
+  display: flex;
+  max-width: 300px;
+  max-height: 125px;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .container {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    padding-top: 75px;
+    padding-top: 30vh;
   }
-  .container h1 {
-    align-self: center;
-    font-style: normal;
-    font-weight: 1200;
-    font-size: 400%;
-    line-height: 100%;
-    letter-spacing: -1px;
-  }
-  .container h3 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 250%;
-    color: #FF7597;
-    line-height: 100%;
-    letter-spacing: -1px;
+  .container h2 {
+    font-size: 300%;
   }
   .container p {
-    width: 80vw;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
+    font-size: 200%;
+    width: 60vw;
   }
-  .container button {
-    color: #FF7597;
+  .container .download {
+    margin-top: 20vh;
+  }
+  .container .button {
     transition: 0.25s;
     background: none;
     border: 2px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 12em;
-    height: 4em;
   }
-  .container .code-svg {
-    top: 100vh;
+  .container .button:hover, .container .button:focus {
+    border-color: #FF0266;
+    color: #fff;
+  }
+  .container .button a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
   }
   .container .card-container {
     display: flex;
-    padding-top: 20px;
-    max-width: 98vw;
+    align-content: space-around;
+    padding-top: 80px;
+    max-width: 60vw;
   }
   .container .card-container .slick-arrow {
-    position: relative;
-    align-self: center;
-    align-items: center;
-    max-height: 40px;
-    max-width: 40px;
-    border-color: #121212;
+    max-width: 50px;
+    max-height: 50px;
+    border-color: #fff;
+    border-radius: 25%;
   }
-  .container .card-container .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .container .card-container .slick-arrow:hover, .container .card-container .slick-arrow:focus {
+    border-color: #FF0266;
+    color: #fff;
   }
   .container .card-container .card .summary {
-    width: 60vw;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
-  }
-  .container .card-container .card img {
-    display: flex;
-    max-width: 300px;
-    max-height: 125px;
-    width: auto;
-    height: auto;
-    border-radius: 20px;
+    max-width: 50vw;
   }
 }
 
