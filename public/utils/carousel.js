@@ -1,3 +1,4 @@
+// Creates Slick Carousel
 $(document).ready(function(){
   $('.card-container').slick({
     // prev arrow
