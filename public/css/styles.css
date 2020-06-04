@@ -6,7 +6,7 @@
 }
 
 span {
-  color: #FF7597;
+  color: #FF0266;
 }
 
 section {
@@ -34,6 +34,7 @@ a {
   align-items: center;
   width: 12em;
   height: 4em;
+  margin-top: 30vh;
 }
 .download:hover, .download:focus {
   border-color: #FF0266;
@@ -209,12 +210,12 @@ a {
     font-style: normal;
     font-weight: bold;
     font-size: 250%;
-    color: #FF0266;
+    color: #FF7597;
     line-height: 100%;
     letter-spacing: -1px;
   }
   .container p {
-    width: 60vw;
+    width: 80vw;
     font-weight: normal;
     font-size: 20px;
     line-height: 150%;
@@ -225,19 +226,29 @@ a {
   }
   .container .card-container {
     display: flex;
-    max-width: 95vw;
+    padding-top: 20px;
+    max-width: 98vw;
   }
   .container .card-container .slick-arrow {
+    position: relative;
     align-self: center;
-    max-height: 24px;
-    max-width: 24px;
-    border-radius: 50%;
+    align-items: center;
+    max-height: 40px;
+    max-width: 40px;
+    border-color: #121212;
   }
   .container .card-container .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .container .card-container .card .summary {
+    width: 60vw;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
   }
   .container .card-container .card img {
     display: flex;
