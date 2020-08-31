@@ -4,24 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "sass": "sass --watch public/scss/style.scss public/css/styles.css",
-    "build": "babel public -d dist"
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
   },
   "author": "Anthony Mercado",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "heroku": "^7.41.1",
-    "sass": "^1.26.5"
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/core": "^7.11.5",
     "nodemon": "^2.0.3"
   }
 }
