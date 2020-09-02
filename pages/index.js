@@ -1,41 +1,79 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import utilStyles from '../styles/utils.module.css'
+import { Container, Col, Row } from 'react-bootstrap'
+import { getProjects } from '../lib/projects'
 
-export default function HomePage() {
+export async function getStaticProps() {
+  const projectData = getProjects()
+  return {
+    props: {
+      projectData
+    }
+  }
+}
+
+export default function HomePage({ projectData }) {
   return (
     <div>
       <Head>
         <title>Anthony Mercado | Software Engineer</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&display=swap" rel="stylesheet"></link>
       </Head>
       <section>
-        <h1>Anthony Mercado</h1>
-        <h2>Software Engineer</h2>
-        <img 
-          className={`${utilStyles.headerImage} ${utilStyles.borderCircle}`} 
-          src="/images/profile.png"
-          alt="Anthony Mercado"
-        />
+        <Container>
+          <h1 className="mt-4">Anthony Mercado</h1>
+          <h2 className="mb-4">Software Engineer</h2>
+        </Container>
       </section>
-      <hr/>
       <section>
-        <Link href="/blog">
-          <a target="_blank">Blog</a>
-        </Link>
-        <a href="https://github.com/basedantoni" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/anthony-mercado/" target="_blank">LinkedIn</a>
+        <Container>
+          <hr/>
+          <Row>
+            <Col className="text-center">
+              <Link href="/blog">
+              <a target="_blank">Blog</a>
+              </Link>
+            </Col>
+            <Col className="text-center">
+              <a href="https://github.com/basedantoni" target="_blank">Github</a>        
+            </Col>
+            <Col className="text-center">
+              <a href="https://www.linkedin.com/in/anthony-mercado/" target="_blank">LinkedIn</a>
+            </Col>
+          </Row>
+          <hr />
+        </Container>
       </section>
-      <hr />
       <section>
-        <h3>Get in Touch!</h3>
-        <a>Email</a>
-        <a href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
-        <h3>Hello World,</h3>
-        <p>I am an eager software engineer open to any opportunity presented to me. I have a passion for not only software development, but for design as well. I enjoy working with complex systems with many moving parts and piecing them together to work elegantly. My favorite technologies are React, NodeJS, and GraphQL</p>
+        <Container>
+          <Row>
+            <Col>
+              <h3 className="mt-4" >Hello World,</h3>
+              <p>I am an eager software engineer open to any opportunity presented to me. I have a passion for not only software development, but for design as well. I enjoy working with complex systems with many moving parts and piecing them together to work elegantly. My favorite technologies are React, NodeJS, and GraphQL</p>
+            </Col>
+            <Col className="my-auto text-center">
+              {/* <img 
+                className={`${utilStyles.headerImage} ${utilStyles.borderCircle}`} 
+                src="/images/profile.png"
+                alt="Anthony Mercado"
+              /> */}
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h3 className="mt-5">Get in Touch!</h3>
+              <a className="px-3">Email</a>
+              <a className="px-3" href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
+            </Col>
+          </Row>
+          <hr />
+        </Container>
       </section>
-      <hr />
       <section>
-        <h3>Portfolio</h3>
+        <Container>
+          <h3 className="text-center">Portfolio</h3>
+          
+        </Container>
       </section>
     </div>
   )

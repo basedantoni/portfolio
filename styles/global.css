@@ -1,15 +1,27 @@
+:root {
+  --primary-color: #5cdb95;
+  --secondary-color: #8ee4af;
+  --tertiary-color: #17181c;
+  --text-color: #05386b;
+  --text-secondary-color: #edf5e1;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;;
   line-height: 1.6;
   font-size: 18px;
 }
 
 * {
   box-sizing: border-box;
+  background-color: var(--tertiary-color);
+  color:var(--text-secondary-color);
+}
+h1 {
+  font-size: 200%;
 }
 
 a {
