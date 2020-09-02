@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Card } from 'react-bootstrap'
 import { getProjects } from '../lib/projects'
 
 export async function getStaticProps() {
-  const projectData = getProjects()
+  const projectData = await getProjects()
   return {
     props: {
       projectData
@@ -72,7 +72,17 @@ export default function HomePage({ projectData }) {
       <section>
         <Container>
           <h3 className="text-center">Portfolio</h3>
-          
+          <Row>
+            {projectData.map(({ id, title, shortDescription, fullDescription, image }) => (
+              <Card key={id} style={{ width: '18rem' }} className="m-2">
+                <Card.Img variant="top" src={image.url} />
+                <Card.Body>
+                  <Card.Title>{ title }</Card.Title>
+                  <Card.Text>{ shortDescription }</Card.Text>
+                </Card.Body>
+              </Card>
+            ))}
+          </Row>
         </Container>
       </section>
     </div>
