@@ -20,24 +20,24 @@ export default function HomePage({ projectData }) {
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&display=swap" rel="stylesheet"></link>
       </Head>
       <section>
-        <div>
-          <h1 className="mt-4">Anthony Mercado</h1>
-          <h2 className="mb-4">Software Engineer</h2>
+        <div className="p-4 shadow rounded bg-white">
+          <h1 className="text-purple-500 leading-normal">Anthony Mercado</h1>
+          <h2>Software Engineer</h2>
         </div>
       </section>
       <section>
         <div>
           <hr/>
           <div>
-            <div className="text-center">
+            <div>
               <Link href="/blog">
               <a target="_blank">Blog</a>
               </Link>
             </div>
-            <div className="text-center">
+            <div>
               <a href="https://github.com/basedantoni" target="_blank">Github</a>        
             </div>
-            <div className="text-center">
+            <div>
               <a href="https://www.linkedin.com/in/anthony-mercado/" target="_blank">LinkedIn</a>
             </div>
           </div>
@@ -48,10 +48,10 @@ export default function HomePage({ projectData }) {
         <div>
           <div>
             <div>
-              <h3 className="mt-4" >Hello World,</h3>
+              <h3 >Hello World,</h3>
               <p>I am an eager software engineer open to any opportunity presented to me. I have a passion for not only software development, but for design as well. I enjoy working with complex systems with many moving parts and piecing them together to work elegantly. My favorite technologies are React, NodeJS, and GraphQL</p>
             </div>
-            <div className="my-auto text-center">
+            <div>
               {/* <img 
                 className={`${utilStyles.headerImage} ${utilStyles.borderCircle}`} 
                 src="/images/profile.png"
@@ -61,9 +61,9 @@ export default function HomePage({ projectData }) {
           </div>
           <div>
             <div>
-              <h3 className="mt-5">Get in Touch!</h3>
-              <a className="px-3">Email</a>
-              <a className="px-3" href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
+              <h3>Get in Touch!</h3>
+              <a>Email</a>
+              <a href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
             </div>
           </div>
           <hr />
@@ -71,7 +71,7 @@ export default function HomePage({ projectData }) {
       </section>
       <section>
         <div>
-          <h3 className="text-center">Portfolio</h3>
+          <h3>Portfolio</h3>
           <div>
             {/* {projectData.map(({ id, title, shortDescription, fullDescription, image }) => (
               <Card key={id} style={{ width: '18rem' }} className="m-2">
