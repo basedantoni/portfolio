@@ -6,7 +6,8 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Anthony Mercado",
   "license": "ISC",
