@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "next start -p $PORT",
+    "start": "next start",
     "dev": "next dev",
-    "build": "next build",
-    "heroku-postbuild": "npm run build"
+    "build": "next build"
   },
   "author": "Anthony Mercado",
   "license": "ISC",
