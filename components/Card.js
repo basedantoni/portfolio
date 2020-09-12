@@ -8,7 +8,7 @@ export default function Card({ project }) {
         <p className="text-gray-300 py-4">{project.shortDescription}</p>
         <div className=" pt-4">
           {project.technologies.map(tech => (
-            <span key={project.tech} className="inline-block bg-gray-700 rounded-full px-2 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">#{tech}</span>
+            <span className="inline-block bg-gray-700 rounded-full px-2 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">#{tech}</span>
           ))}
         </div>
       </div>

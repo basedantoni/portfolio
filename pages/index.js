@@ -45,23 +45,23 @@ export default function HomePage({ projectData }) {
       </section>
       <hr className="border-gray-500"/>
       <section>
-        <div>
-          <div className="flex">
+        <div className="flex">
+          <div className="flex flex-col">
             <div className="my-6 md:my-10">
               <h3 className="text-gray-300 text-2xl px-2 py-1">Hello World,</h3>
               <p className="text-gray-300 px-2 py-1">I'm Anthony, an avid software engineer looking to jump-start my professional career. I have a passion for not only software development, but for design as well. I enjoy working with complex systems with many moving parts and piecing them together to work elegantly. My favorite technologies are React, NodeJS, and GraphQL</p>
             </div>
-            <div className="hidden md:flex flex-wrap justify-center">
-              <div className="w-7/12 px-4 py-4">
-                <img src="/images/profile.png" alt="..." className="shadow rounded-full max-w-full h-auto align-middle border-none" />
-              </div>
-            </div>
-          </div>
-          <div>
             <div className="mb-4 md:my-10">
               <h3 className="text-gray-300 text-2xl px-2 py-1">Get in Touch!</h3>
               <a className="text-teal-400 hover:text-teal-300 px-2 py-1">Email</a>
               <a className="text-teal-400 hover:text-teal-300 px-2 py-1" href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <div className="hidden md:flex flex-wrap justify-end items-center pr-10">
+              <div className="w-7/12 px-4 py-4">
+                <img src="/images/profile.png" alt="..." className="shadow rounded-full max-w-full h-auto align-middle border-none" />
+              </div>
             </div>
           </div>
           <hr className="border-gray-500"/>
@@ -70,7 +70,7 @@ export default function HomePage({ projectData }) {
       <section>
         <div className="mt-4">
           <h3 className="text-gray-300 text-center text-4xl">Portfolio</h3>
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-evenly">
             {projectData.map(project => (
                 <Card key={project.id} project={project}></Card>
             ))}
