@@ -6,8 +6,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export"
+    "build": "next build && next export"
   },
   "author": "Anthony Mercado",
   "license": "ISC",
