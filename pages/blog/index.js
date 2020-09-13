@@ -1,7 +1,7 @@
 export default function Posts() {
   return (
-    <div>
-      <h1>Example</h1>
+    <div className="flex justify-center align-middle">
+      <h1 className="text-6xl">Coming Soon...</h1>
     </div>
   )
 }
