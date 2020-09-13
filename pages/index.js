@@ -53,7 +53,7 @@ export default function HomePage({ projectData }) {
             </div>
             <div className="mb-4 md:my-10">
               <h3 className="text-gray-300 text-2xl px-2 py-1">Get in Touch!</h3>
-              {/* <a className="text-teal-400 hover:text-teal-300 px-2 py-1">Email</a> */}
+              <a className="text-teal-400 hover:text-teal-300 px-2 py-1">Email</a>
               <a className="text-teal-400 hover:text-teal-300 px-2 py-1" href="/files/resume.pdf" download="anthonymercado.pdf">Resume</a>
             </div>
           </div>
